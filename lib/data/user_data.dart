@@ -7,4 +7,5 @@ final List<UserModel> users = const [
     UserModel(name: 'Diana Prince', email: 'diana@amazon.com'),
     UserModel(name: 'Ethan Hunt', email: 'ethan@mission.com'),
     UserModel(name: 'Fiona Glenanne', email: 'fiona@burnnotice.com'),
+    UserModel(name: 'Jhon Doe', email: 'jhondoe@yahoo.com'),
   ];
