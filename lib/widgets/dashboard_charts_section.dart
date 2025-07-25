@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_site/widgets/chart_widgets/candlestic_chart_widget.dart';
 import 'chart_widgets/line_chart_widget.dart';
 import 'chart_widgets/bar_chart_widget.dart';
 
@@ -24,7 +25,7 @@ class DashboardChartsSection extends StatelessWidget {
             const SizedBox(height: 20),
             const SalesBarChartWidget(),
             const SizedBox(height: 20),
-            // const SalesCandlestickChartWidget(),
+            const SalesCandlestickChartWidget(),
           ],
         ),
       ),
