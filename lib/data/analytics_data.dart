@@ -26,10 +26,4 @@ const List<AnalyticsItem> analyticsData = [
     icon: Icons.trending_up,
     color: Colors.orange,
   ),
-  AnalyticsItem(
-    title: 'Bounce Rate',
-    value: '45%',
-    icon: Icons.broken_image,
-    color: Colors.red,
-  ),
 ];
