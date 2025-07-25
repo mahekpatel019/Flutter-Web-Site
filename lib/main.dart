@@ -512,10 +512,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_site/views/analytics_screen.dart';
+import 'package:web_site/views/dashboard_screen.dart';
 import 'package:web_site/views/product_page.dart';
 import 'package:web_site/views/settings_page.dart';
 import 'package:web_site/views/user_page.dart';
-import 'package:web_site/widgets/dashboard_widget.dart';
 
 void main() {
   runApp(const MyWebDashboardApp());
@@ -585,7 +585,7 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage> {
   int selectedIndex = 0;
-  bool isDarkMode = false;
+  // bool isDarkMode = false;
 
   final List<String> pageNames = [
     'Dashboard',
@@ -721,14 +721,14 @@ class _DashboardPageState extends State<DashboardPage> {
             child: Row(
               children: [
                 Icon(
-                  isDarkMode ? Icons.dark_mode : Icons.light_mode,
+                  widget.isDarkMode ? Icons.dark_mode : Icons.light_mode,
                   size: 20,
                   color: Theme.of(context).colorScheme.onSurfaceVariant,
                 ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    isDarkMode ? 'Dark Mode' : 'Light Mode',
+                    widget.isDarkMode ? 'Dark Mode' : 'Light Mode',
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ),
@@ -836,7 +836,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget _buildPageContent() {
     switch (selectedIndex) {
       case 0:
-        return buildDashboardContent(context);
+        return DashboardScreen();
       case 1:
         return AnalyticsScreen();
       case 2:
@@ -846,7 +846,7 @@ class _DashboardPageState extends State<DashboardPage> {
       case 4:
         return SettingsPage();
       default:
-        return buildDashboardContent(context);
+        return DashboardScreen();
     }
   }
 }
