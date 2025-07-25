@@ -43,4 +43,11 @@ const List<ProductModel> products = [
         'Full HD display for crisp visuals and vibrant colors, perfect for work and entertainment.',
     imageUrl: 'https://picsum.photos/id/1015/400/300',
   ),
+  ProductModel(
+    name: 'IPhone',
+    price: '\$1899.00',
+    description:
+        'In the world fastest computing chip A20, Slimmest and Faster phone available.',
+    imageUrl: 'https://picsum.photos/id/1016/400/300',
+  ),
 ];
