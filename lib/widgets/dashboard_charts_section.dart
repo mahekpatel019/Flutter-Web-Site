@@ -24,6 +24,7 @@ class DashboardChartsSection extends StatelessWidget {
             const SizedBox(height: 20),
             const SalesBarChartWidget(),
             const SizedBox(height: 20),
+            // const SalesCandlestickChartWidget(),
           ],
         ),
       ),
