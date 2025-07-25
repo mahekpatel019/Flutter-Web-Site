@@ -16,9 +16,9 @@ class DashboardChartsSection extends StatelessWidget {
           children: [
             Text(
               'Sales Overview',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 24),
             const SalesLineChartWidget(),

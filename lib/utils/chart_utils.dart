@@ -5,7 +5,13 @@ import 'package:flutter/material.dart';
 
 class ChartUtils {
   static const List<String> weekDays = [
-    'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat',
+    'Sun',
   ];
 
   static FlTitlesData getWeeklyTitlesData() {
@@ -20,10 +26,7 @@ class ChartUtils {
         ),
       ),
       leftTitles: AxisTitles(
-        sideTitles: SideTitles(
-          showTitles: true,
-          reservedSize: 32,
-        ),
+        sideTitles: SideTitles(showTitles: true, reservedSize: 32),
       ),
     );
   }
@@ -38,9 +41,7 @@ class ChartUtils {
           ),
         ),
       ),
-      leftTitles: AxisTitles(
-        sideTitles: SideTitles(showTitles: true),
-      ),
+      leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
     );
   }
 
@@ -51,10 +52,7 @@ class ChartUtils {
         getTooltipItem: (group, groupIndex, rod, rodIndex) {
           return BarTooltipItem(
             '${rod.toY}',
-            const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
+            const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           );
         },
       ),
@@ -63,16 +61,12 @@ class ChartUtils {
 
   static List<BarChartGroupData> getSampleBarGroups() {
     const List<double> values = [6, 8, 5, 7, 3, 9, 4];
-    
+
     return values.asMap().entries.map((entry) {
       return BarChartGroupData(
         x: entry.key,
         barRods: [
-          BarChartRodData(
-            toY: entry.value,
-            color: Colors.teal,
-            width: 20,
-          ),
+          BarChartRodData(toY: entry.value, color: Colors.teal, width: 20),
         ],
       );
     }).toList();
@@ -94,23 +88,16 @@ class ChartUtils {
   static FlTitlesData getCandlestickTitlesData() {
     return FlTitlesData(
       show: true,
-      rightTitles: AxisTitles(
-        sideTitles: SideTitles(showTitles: false),
-      ),
-      topTitles: AxisTitles(
-        sideTitles: SideTitles(showTitles: false),
-      ),
+      rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+      topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
       leftTitles: AxisTitles(
         sideTitles: SideTitles(
           showTitles: true,
           reservedSize: 40,
           getTitlesWidget: (value, meta) {
             return Text(
-              '\${value.toStringAsFixed(0)}',
-              style: const TextStyle(
-                color: Colors.grey,
-                fontSize: 12,
-              ),
+              '\$${value.toStringAsFixed(0)}',
+              style: const TextStyle(color: Colors.grey, fontSize: 12),
             );
           },
         ),
@@ -123,10 +110,7 @@ class ChartUtils {
             if (value.toInt() < weekDays.length) {
               return Text(
                 weekDays[value.toInt()],
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: 12,
-                ),
+                style: const TextStyle(color: Colors.grey, fontSize: 12),
               );
             }
             return const Text('');
@@ -144,16 +128,10 @@ class ChartUtils {
       horizontalInterval: 1,
       verticalInterval: 1,
       getDrawingHorizontalLine: (value) {
-        return FlLine(
-          color: Colors.grey.withOpacity(0.3),
-          strokeWidth: 0.5,
-        );
+        return FlLine(color: Colors.grey.withOpacity(0.3), strokeWidth: 0.5);
       },
       getDrawingVerticalLine: (value) {
-        return FlLine(
-          color: Colors.grey.withOpacity(0.3),
-          strokeWidth: 0.5,
-        );
+        return FlLine(color: Colors.grey.withOpacity(0.3), strokeWidth: 0.5);
       },
     );
   }
@@ -161,10 +139,7 @@ class ChartUtils {
   static FlBorderData getCandlestickBorderData() {
     return FlBorderData(
       show: true,
-      border: Border.all(
-        color: Colors.grey.withOpacity(0.5),
-        width: 1,
-      ),
+      border: Border.all(color: Colors.grey.withOpacity(0.5), width: 1),
     );
   }
 }
