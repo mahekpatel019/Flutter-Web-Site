@@ -513,6 +513,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_site/views/analytics_screen.dart';
 import 'package:web_site/views/product_page.dart';
+import 'package:web_site/views/settings_page.dart';
 import 'package:web_site/views/user_page.dart';
 import 'package:web_site/widgets/dashboard_widget.dart';
 
@@ -843,23 +844,9 @@ class _DashboardPageState extends State<DashboardPage> {
       case 3:
         return ProductsPage();
       case 4:
-        return _buildSettingsContent();
+        return SettingsPage();
       default:
         return buildDashboardContent(context);
     }
-  }
-
-  Widget _buildSettingsContent() {
-    return const Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.settings, size: 64, color: Colors.grey),
-          SizedBox(height: 16),
-          Text('Settings Page', style: TextStyle(fontSize: 24)),
-          Text('Application settings and preferences will be shown here'),
-        ],
-      ),
-    );
   }
 }
