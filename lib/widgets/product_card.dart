@@ -76,7 +76,7 @@ class ProductCard extends StatelessWidget {
                       color: isDark ? Colors.white : Colors.black87,
                     ),
                     maxLines: 2,
-                    // overflow: TextOverflow.ellipsis,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   SizedBox(height: cardPadding * 0.5),
                   Expanded(
