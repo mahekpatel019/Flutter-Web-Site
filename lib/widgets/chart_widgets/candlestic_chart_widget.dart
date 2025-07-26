@@ -8,7 +8,6 @@ class SalesCandlestickChartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Custom chart container
     return ChartContainer(
       child: CandlestickChart(
         CandlestickChartData(
